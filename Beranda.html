@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Liyucks Coffee Shop</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Navigasi -->
+    <nav class="navbar">
+        <a href="#home">Beranda</a>
+        <a href="#menu">Menu</a>
+        <a href="#checkout">Checkout</a>
+        <a href="#contact">Kontak</a>
+    </nav>
+
+    <!-- Banner (Slider) -->
+    <section id="home">
+        <div class="slider-container">
+            <div class="slider">
+                <img src="assets/coffee-banner1.jpg" alt="Coffee Banner 1">
+                <img src="assets/coffee-banner2.jpg" alt="Coffee Banner 2">
+                <img src="assets/coffee-banner3.jpg" alt="Coffee Banner 3">
+            </div>
+            <div class="slider-text">
+                <h1>Liyucks Coffee Shop</h1>
+                <p>Nikmati kopi terbaik dengan cita rasa khas</p>
+            </div>
+            <button class="prev" onclick="prevSlide()">&#10094;</button>
+            <button class="next" onclick="nextSlide()">&#10095;</button>
+        </div>
+    </section>
+
+    <!-- Menu Kopi -->
+    <section id="menu">
+        <h2>Menu Kopi</h2>
+        <div class="coffee-list">
+            <div class="menu-item">
+                <img src="assets/espresso.jpg" alt="Espresso">
+                <h3>Espresso</h3>
+                <p>Rp 15.000</p>
+                <button class="btn" onclick="addToCart('Espresso', 15000)">Tambah</button>
+            </div>
+            <div class="menu-item">
+                <img src="assets/latte.jpg" alt="Latte">
+                <h3>Latte</h3>
+                <p>Rp 20.000</p>
+                <button class="btn" onclick="addToCart('Latte', 20000)">Tambah</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Checkout -->
+    <section id="checkout">
+        <h2>Keranjang Belanja</h2>
+        <ul id="cart"></ul>
+        <button class="btn" onclick="checkout()">Pesan Sekarang</button>
+    </section>
+
+    <!-- Kontak -->
+    <section id="contact">
+        <h2>Kontak Kami</h2>
+        <div class="contact-info">
+            <p>📞 WhatsApp: <a href="https://wa.me/6281234567890" target="_blank">+62 838-3684-2993</a></p>
+            <p>📧 Email: <a href="mailto:email_toko@example.com">liyusono@gmail.com</a></p>
+        </div>
+
+        <!-- Form Kontak -->
+        <form id="contactForm">
+            <input type="text" id="name" placeholder="Nama Anda" required>
+            <input type="email" id="email" placeholder="Email Anda" required>
+            <textarea id="message" placeholder="Pesan Anda" required></textarea>
+            <button class="btn" type="submit">Kirim</button>
+        </form>
+        <p id="contactMessage"></p>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>

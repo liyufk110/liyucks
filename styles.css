@@ -1,0 +1,268 @@
+/* Reset margin & padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Background utama */
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(to bottom, #ffae42, #ff6f3c);
+    color: #fff;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+/* Navigasi */
+.navbar {
+    background: linear-gradient(to right, #ff4500, #ff6347);
+    padding: 15px;
+    text-align: center;
+}
+
+/* Kotak di setiap teks navigasi */
+.navbar a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 12px 24px;
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.2);
+    border: 2px solid white;
+    margin: 5px;
+    display: inline-block;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* Efek hover */
+.navbar a:hover {
+    background: rgba(255, 255, 255, 0.5);
+    border-color: yellow;
+    color: black;
+    transform: scale(1.1);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Slider */
+.slider-container {
+    position: relative;
+    width: 100%;
+    max-width: 1200px; /* Agar kompatibel di laptop & PC */
+    margin: auto; /* Pusatkan slider */
+    overflow: hidden;
+}
+
+/* Atur ukuran slider agar kompatibel di semua layar */
+.slider {
+    display: flex;
+    width: 300%; /* Pastikan cukup untuk semua gambar */
+    transition: transform 0.5s ease-in-out;
+}
+
+.slider img {
+    width: 100%;
+    height: 500px; /* Sesuaikan tinggi agar tidak terlalu besar */
+    object-fit: cover; /* Pastikan gambar tidak terpotong */
+}
+
+/* Posisi teks slider agar tidak berubah */
+.slider-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 20px 40px;
+    border-radius: 10px;
+    font-size: 32px;
+    font-weight: bold;
+}
+
+/* Efek animasi muncul */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translate(-50%, -60%);
+    }
+    to {
+        opacity: 1;
+        transform: translate(-50%, -50%);
+    }
+}
+
+/* Tombol prev & next */
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 15px;
+    cursor: pointer;
+    font-size: 30px;
+    border-radius: 5px;
+}
+
+.prev {
+    left: 20px;
+}
+
+.next {
+    right: 20px;
+}
+
+/* Hover efek tombol slider */
+.prev:hover, .next:hover {
+    background: rgba(0, 0, 0, 0.8);
+}
+
+/* Menu kopi */
+.coffee-list {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.menu-item {
+    background: rgba(255, 255, 255, 0.2);
+    padding: 15px;
+    border-radius: 10px;
+    margin: 10px;
+    width: 180px;
+    display: inline-block;
+    transition: 0.3s ease-in-out;
+}
+
+/* Ukuran gambar kopi lebih kecil */
+.menu-item img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+/* Efek hover pada menu kopi */
+.menu-item:hover {
+    background: rgba(255, 255, 255, 0.3);
+    transform: scale(1.05);
+}
+
+/* Tombol */
+.btn {
+    background: linear-gradient(to right, #ff4500, #ff6347);
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.btn:hover {
+    background: linear-gradient(to right, #ff2200, #ff5733);
+    transform: scale(1.08);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.4);
+}
+
+/* Checkout */
+#checkout {
+    text-align: center;
+    padding: 20px;
+}
+
+#cart {
+    list-style: none;
+    padding: 0;
+}
+
+/* Kontak */
+#contact {
+    background: linear-gradient(to bottom, #ff7733, #ff4500);
+    padding: 50px 20px;
+    border-top: 5px solid #ff5733;
+}
+
+/* Form kontak */
+#contactForm {
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    margin: 20px auto;
+}
+
+#contactForm input, #contactForm textarea {
+    padding: 12px;
+    margin: 8px 0;
+    border-radius: 5px;
+    background: rgba(255, 255, 255, 0.2);
+    color: white;
+    border: 2px solid #ff4500;
+    font-size: 16px;
+}
+
+#contactForm input::placeholder, #contactForm textarea::placeholder {
+    color: #ffddcc;
+}
+
+#contactForm button {
+    background: linear-gradient(to right, #ff4500, #ff5733);
+    color: white;
+    border: none;
+    padding: 12px;
+    border-radius: 5px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+}
+
+#contactForm button:hover {
+    background: linear-gradient(to right, #ff2200, #ff7733);
+    transform: scale(1.08);
+}
+
+/* Responsif untuk tampilan HP */
+@media (max-width: 768px) {
+    .navbar {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .menu-item {
+        width: 90%;
+    }
+
+    #contact {
+        padding: 30px 10px;
+    }
+}
+/* Responsif untuk tampilan laptop & PC */
+@media (max-width: 1024px) {
+    .slider img {
+        height: 400px; /* Sesuaikan tinggi di laptop */
+    }
+}
+
+@media (max-width: 768px) {
+    .slider img {
+        height: 300px; /* Sesuaikan tinggi di HP */
+    }
+    
+    .slider-text {
+        font-size: 24px;
+        padding: 15px 30px;
+    }
+
+    .prev, .next {
+        font-size: 20px;
+        padding: 10px;
+    }
+}
